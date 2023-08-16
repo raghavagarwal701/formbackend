@@ -12,8 +12,6 @@ router.route('/add').post((req,res)=>{
         phoneNumber,
         email,
     });
-    console.log("new");
-    console.log(newForm);
     newForm.save()
         .then(()=>res.json('Form added!'))
         .catch(err=>{
