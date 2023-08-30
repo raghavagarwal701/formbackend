@@ -6,11 +6,13 @@ router.route('/add').post((req,res)=>{
     const companyName=req.body.companyName;
     const phoneNumber=req.body.phoneNumber;
     const email=req.body.email;
+    const userResponses=req.body.userResponses;
     const newForm=new Form({
         name,
         companyName,
         phoneNumber,
         email,
+        userResponses,
     });
     newForm.save()
         .then(()=>res.json('Form added!'))
